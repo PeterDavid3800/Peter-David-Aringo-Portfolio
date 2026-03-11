@@ -285,3 +285,45 @@ footer{
   margin:auto;       /* Center the image in the card */
   border-radius:10px;
 }
+
+.contact-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  margin-top:40px;
+}
+
+.contact-left p{
+  margin-bottom:15px;
+}
+
+.social-icons{
+  margin:20px 0;
+}
+
+.social-icons a{
+  margin-right:15px;
+  text-decoration:none;
+  color:var(--accent-red);
+  font-weight:500;
+}
+
+.contact-right form{
+  display:flex;
+  flex-direction:column;
+}
+
+.contact-right input,
+.contact-right textarea{
+  margin-bottom:15px;
+  padding:12px;
+  border-radius:8px;
+  border:none;
+  background:#141414;
+  color:white;
+}
+
+.contact-right input:focus,
+.contact-right textarea:focus{
+  outline:2px solid var(--accent-red);
+}

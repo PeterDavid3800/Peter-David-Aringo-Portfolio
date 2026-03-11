@@ -16,7 +16,7 @@ const Header = () => {
         </nav>
 
         <div className="header-text">
-          <p>BBIT Student</p>
+          <p>BBIT Graduate</p>
           <h1>
             Hi, I'm <span>Peter David Aringo</span><br /> from Kenya
           </h1>
