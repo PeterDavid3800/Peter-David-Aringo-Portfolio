@@ -1,70 +1,145 @@
-// About.js
-import React from 'react';
+import React, { useState } from "react";
 
 const About = () => {
+
+  const [activeTab, setActiveTab] = useState("skills");
+
   return (
-    <div id="about">
+    <section id="about" className="about-section">
+
       <div className="container">
-        <div className="row">
-          <div className="about-col-1">
-            <img src="images/user.jpg" alt="User" />
-          </div>
-          <div className="about-col-2">
-            <h1>About Me</h1>
-            <p>
-              I’m Peter David Aringo, a 23-year-old graduate of Strathmore University, holding a Bachelor of Business Information Technology (BBIT). Passionate about the intersection of technology and business, I specialize in building modern, scalable web applications using Laravel and React.js—the same stack I used to build this portfolio.
-My experience spans across business intelligence, digital marketing, and full-stack development, with a focus on creating solutions that are both intuitive and impactful. I’m also deeply interested in artificial intelligence.
-Away from the screen, I enjoy CrossFit, rugby, and connecting with like-minded creators. I believe in continuous growth, clear communication, and using tech to solve real-world problems.
-Let’s build something remarkable.
-</p>
 
-            <div className="tab-titles">
-              <p className="tab-links active-link" onClick={() => opentab('skills')}>Skills</p>
-              <p className="tab-links" onClick={() => opentab('experience')}>Experience</p>
-              <p className="tab-links" onClick={() => opentab('education')}>Education</p>
-            </div>
-            <div className="tab-contents active-tab" id="skills">
-              <ul>
-                <li><span>UI/UX</span><br />Designing Web Applications</li>
-                <li><span>Web Development</span><br />Web Application Development</li>
-                <li><span>Network Device Configuration</span><br />Configuration of Network Devices</li>
-              </ul>
-            </div>
-              <div className="tab-contents" id="experience">
-  <ul>
-    <li>
-      <span>March 2021 – April 2021</span><br />
-      Administrative Intern National Hospital Insurance Fund/
-    </li>
-    <li>
-      <span>January 2023 – April 2023</span><br />
-      Web Technologies Trainee at Huawei Technologies Kenya
-    </li>
-    <li>
-      <span>February 2024 – October 2024</span><br />
-      Intern at the Strathmore Office of Graduate Studies
-    </li>
-    <li>
-      <span>January 2025 – May 2025</span><br />
-      Digital Media Coordinator at Genesis Marketing Solutions
-    </li>
-    <li>
-      <span>2023 – Present</span><br />
-      Freelance Full-Stack Developer – Laravel & React (Projects include CPST Accounting System, Portfolio Website)
-    </li>
-  </ul>
-</div>
+        <div className="about-grid">
 
-            <div className="tab-contents" id="education">
-              <ul>
-                <li><span>2019</span><br />Graduation From Nova Pioneer High School</li>
-                <li><span>2024</span><br />Bachelor in Business Information Technologies</li>
-              </ul>
-            </div>
+          {/* Profile Image */}
+          <div className="about-image">
+            <img src="/images/user.png" alt="Peter David Aringo" />
           </div>
+
+
+          {/* About Content */}
+          <div className="about-content">
+
+            <h1 className="section-title">About Me</h1>
+
+            <p className="about-text">
+              I’m <strong>Peter David Aringo</strong>, a graduate of Strathmore
+              University with a Bachelor of Business Information Technology (BBIT).
+              I specialize in building modern, scalable web applications using
+              <strong> Laravel and React.js</strong>. My experience spans business
+              intelligence, digital marketing, and full-stack development, with a
+              strong interest in artificial intelligence. Outside of tech I enjoy
+              <strong> CrossFit, rugby, and connecting with creators</strong>.
+            </p><br />
+
+
+            {/* Tabs */}
+            <div className="about-tabs">
+
+              <button
+                className={activeTab === "skills" ? "tab active" : "tab"}
+                onClick={() => setActiveTab("skills")}
+              >
+                Skills
+              </button>
+
+              <button
+                className={activeTab === "experience" ? "tab active" : "tab"}
+                onClick={() => setActiveTab("experience")}
+              >
+                Experience
+              </button>
+
+              <button
+                className={activeTab === "education" ? "tab active" : "tab"}
+                onClick={() => setActiveTab("education")}
+              >
+                Education
+              </button>
+
+            </div>
+
+
+            {/* Skills */}
+            {activeTab === "skills" && (
+              <div className="skills-grid">
+
+                <div className="skill-card">
+                  <h3>UI / UX</h3>
+                  <p>Designing intuitive web interfaces</p>
+                </div>
+
+                <div className="skill-card">
+                  <h3>Web Development</h3>
+                  <p>Laravel & React full-stack apps</p>
+                </div>
+
+                <div className="skill-card">
+                  <h3>Networking</h3>
+                  <p>Network device configuration</p>
+                </div>
+
+              </div>
+            )}
+
+
+            {/* Experience */}
+            {activeTab === "experience" && (
+              <ul className="timeline">
+
+                <li>
+                  <span>2025</span>
+                  Digital Media Coordinator – Genesis Marketing Solutions
+                </li>
+
+                <li>
+                  <span>2024</span>
+                  Intern – Strathmore Office of Graduate Studies
+                </li>
+
+                <li>
+                  <span>2023</span>
+                  Web Technologies Trainee – Huawei Technologies Kenya
+                </li>
+
+                <li>
+                  <span>2021</span>
+                  Administrative Intern – National Hospital Insurance Fund
+                </li>
+
+                <li>
+                  <span>2023 – Present</span>
+                  Freelance Full-Stack Developer (Laravel & React)
+                </li>
+
+              </ul>
+            )}
+
+
+            {/* Education */}
+            {activeTab === "education" && (
+              <ul className="timeline">
+
+                <li>
+                  <span>2024</span>
+                  Bachelor of Business Information Technology – Strathmore University
+                </li>
+
+                <li>
+                  <span>2019</span>
+                  Nova Pioneer High School
+                </li>
+
+              </ul>
+            )}
+
+          </div>
+
         </div>
+
       </div>
-    </div>
+
+    </section>
   );
 };
 
