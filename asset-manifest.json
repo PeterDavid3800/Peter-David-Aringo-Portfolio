@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/peterdavidaringo-portfolio/static/css/main.3d39eb68.css",
+    "main.js": "/peterdavidaringo-portfolio/static/js/main.8f999efb.js",
+    "static/js/787.a5b89e30.chunk.js": "/peterdavidaringo-portfolio/static/js/787.a5b89e30.chunk.js",
+    "index.html": "/peterdavidaringo-portfolio/index.html",
+    "main.3d39eb68.css.map": "/peterdavidaringo-portfolio/static/css/main.3d39eb68.css.map",
+    "main.8f999efb.js.map": "/peterdavidaringo-portfolio/static/js/main.8f999efb.js.map",
+    "787.a5b89e30.chunk.js.map": "/peterdavidaringo-portfolio/static/js/787.a5b89e30.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3d39eb68.css",
+    "static/js/main.8f999efb.js"
+  ]
+}
